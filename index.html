@@ -41,7 +41,7 @@
             <div class="col-12">
               <label for="peso" class="form-label">Peso</label>
               <div class="input-group">
-                <input class="form-control" type="number" placeholder="Ej:90.65" step="0.01" maxlength="5" oninput="javascript: if (this.value.length > this.maxLength) this.value=this.value.slice(0, this.maxLength);" required/>
+                <input class="form-control" type="number" placeholder="Ej:90.65" step="0.01" maxlength="5" oninput="javascript: if (this.value.length > this.maxLength) this.value=this.value.slice(0, this.maxLength);" id="peso" required/>
                 <span class="input-group-text" id="basic-addon2">Kg</span>
               </div>
             </div>
@@ -49,11 +49,11 @@
             <label class="form-label">Sexo</label>
               <div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="hombre" value="option1">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="hombre" value="hombre">
                   <label class="form-check-label" for="hombre">Hombre</label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="mujer" value="option2">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="mujer" value="mujer">
                   <label class="form-check-label" for="mujer">Mujer</label>
                 </div>
               </div>
