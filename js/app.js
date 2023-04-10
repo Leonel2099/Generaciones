@@ -2,14 +2,57 @@ const formulario = document.querySelector("form");
 formulario.addEventListener("submit", crearObjeto);
 
 class Persona {
+  #nombre;
+  #edad;
+  #dni;
+  #sexo;
+  #peso;
+  #altura;
+  #anioNacimiento;
   constructor(nombre, edad, dni, sexo, peso, altura, anioNacimiento) {
-    this.nombre = nombre;
-    this.edad = edad;
-    this.dni = dni;
-    this.sexo = sexo;
-    this.peso = peso;
-    this.altura = altura;
-    this.anioNacimiento = anioNacimiento;
+    this.#nombre = nombre;
+    this.#edad = edad;
+    this.#dni = dni;
+    this.#sexo = sexo;
+    this.#peso = peso;
+    this.#altura = altura;
+    this.#anioNacimiento = anioNacimiento;
+  }
+  get nombre() {
+    return this.#nombre;
+  }
+  set nombre(nuevoNombre) {
+    this.#nombre = nuevoNombre;
+  }
+  get edad() {
+    return this.#edad;
+  }
+  set edad(nuevaEdad) {
+    this.#edad = nuevaEdad;
+  }
+  get dni() {
+    return this.#dni;
+  }
+  set dni(nuevoDni) {
+    this.#dni = nuevoDni;
+  }
+  get sexo() {
+    return this.#sexo;
+  }
+  set sexo(nuevoSexo) {
+    this.#sexo = nuevoSexo;
+  }
+  get altura() {
+    return this.#altura;
+  }
+  set altura(nuevaAltura) {
+    this.#altura = nuevaAltura;
+  }
+  get anioNacimiento() {
+    return this.#anioNacimiento;
+  }
+  set anioNacimiento(nuevoAnioNacimiento) {
+    this.#anioNacimiento = nuevoAnioNacimiento;
   }
 
   mostrarGeneracion() {
@@ -69,10 +112,20 @@ function crearObjeto(e) {
   let peso = document.getElementById("peso").value;
   const checkBoxMujer = document.getElementById("hombre");
   const checkBoxHombre = document.getElementById("mujer");
-  let sexo = checkBoxHombre.checked ? checkBoxHombre.value : checkBoxMujer.value;
+  let sexo = checkBoxHombre.checked
+    ? checkBoxHombre.value
+    : checkBoxMujer.value;
   let altura = document.getElementById("altura").value;
   let fechaNacimiento = document.getElementById("fechaNacimiento").value;
   formulario.reset();
-  let persona = new Persona(nombre,edad,dni,sexo,peso,altura,fechaNacimiento);
+  let persona = new Persona(
+    nombre,
+    edad,
+    dni,
+    sexo,
+    peso,
+    altura,
+    fechaNacimiento
+  );
   console.log(persona);
 }
