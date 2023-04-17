@@ -32,16 +32,16 @@
           </div>
           <div class="col-12">
             <label for="edad" class="form-label">Edad</label>
-            <input oninput="javascript: if (this.value.length > this.maxLength) this.value=this.value.slice(0, this.maxLength);" type="number" class="form-control" id="edad" placeholder="Ej:12" maxlength="2" required />
+            <input oninput="verificacion();" type="number" class="form-control" id="edad" placeholder="Ej:12" maxlength="2" required />
           </div>
           <div class="col-12">
             <label for="dni" class="form-label">DNI</label>
-            <input oninput="javascript: if (this.value.length > this.maxLength) this.value=this.value.slice(0, this.maxLength);" type="number" class="form-control" id="dni" placeholder="Ej:99999999" maxlength="8" required />
+            <input oninput="verificacion();" type="number" class="form-control" id="dni" placeholder="Ej:99999999" maxlength="8" required />
           </div>
             <div class="col-12">
               <label for="peso" class="form-label">Peso</label>
               <div class="input-group">
-                <input class="form-control" type="number" placeholder="Ej:90.65" step="0.01" maxlength="5" oninput="javascript: if (this.value.length > this.maxLength) this.value=this.value.slice(0, this.maxLength);" required/>
+                <input class="form-control" type="number" placeholder="Ej:90.65" step="0.01" maxlength="5" oninput="verificacion();" required/>
                 <span class="input-group-text" id="basic-addon2">Kg</span>
               </div>
             </div>
@@ -61,7 +61,7 @@
           <div class="col-12">
             <label for="altura" class="form-label">Altura</label>
             <div class="input-group">
-              <input class="form-control" type="number" id="altura" placeholder="Ej:1.65"  maxlength="4" oninput="javascript: if (this.value.length > this.maxLength) this.value=this.value.slice(0, this.maxLength);" step="0.01" min="0" max="200" required/>
+              <input class="form-control" type="number" id="altura" placeholder="Ej:1.65"  maxlength="4" oninput="verificacion();" step="0.01" min="0" max="200" required/>
               <span class="input-group-text" id="basic-addon2">m</span>
             </div>
           </div>
@@ -70,11 +70,19 @@
               <input class="form-control" type="date" id="fechaNacimiento" placeholder="dd/mm/aaaa" required/>
           </div>
           <div class="col-12 text-center mt-4">
-            <button type="submit" class="btn btn-primary">
+            <button type="submit" class="btn btn-secondary">
               Enviar
             </button>
           </div>
         </form>
+      </section>
+      <section class="container">
+        <button class="btn btn-secondary my-2" id="btnGeneracion">Mostrar generacion</button>
+        <button class="btn btn-secondary my-2" id="btnEdad">¿Es mayor de edad?</button>
+        <button class="btn btn-secondary my-2" id="btnEdad">Mostrar datos</button>
+        <div class="alert alert-dark d-none" id="alert" role="alert">
+          A simple dark alert—check it out!
+        </div>
       </section>
     </main>
     <script src="js/bootstrap.min.js"></script>
